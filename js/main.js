@@ -147,3 +147,15 @@
 
 
 }());
+
+function showMeAlert(sectionName) {
+	var sectionURL = "";
+	if	   (sectionName == "aboutMe") 	 { sectionURL = "#fh5co-about";    }
+	else if(sectionName == "resume")  	 { sectionURL = "#fh5co-resume";   }
+	else if(sectionName == "certAndAch") { sectionURL = "#fh5co-features"; }
+	else if(sectionName == "skills")  	 { sectionURL = "#fh5co-skills";   }
+	else if(sectionName == "fmw")	  	 { sectionURL = "#fh5co-blog";     }
+	else if(sectionName == "hireMe")  	 { sectionURL = "#fh5co-started";  }
+	else if(sectionName == "contact") 	 { sectionURL = "#fh5co-consult";  }
+	window.prompt("Like this section? \nHere the URL to reach me easily next time 😃", "https://ayushdayama.github.io/Portfolio" + sectionURL);
+}

@@ -1407,4 +1407,49 @@ input[type="text"] {
   opacity: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
+#hideLinkIconWhiteBG {
+  color:rgba(255, 255, 255, 1);
+  font-size: 3rem;
+}
+
+.hideLinkHeaderWhiteBG:hover #hideLinkIconWhiteBG {
+  display: inline;
+  color:#FF9000;
+  font-size: 3rem;
+}
+
+#hideLinkIconOrangeBG {
+  color:#FF9000;
+  font-size: 3rem;
+}
+
+.hideLinkHeaderOrangeBG:hover #hideLinkIconOrangeBG {
+  display: inline;
+  color:rgba(255, 255, 255, 1);
+  font-size: 3rem;
+}
+
+.sourceToolTip {
+  position: relative;
+  display: inline;
+}
+
+.sourceToolTip .sourceToolTipText {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: 5px;
+}
+
+.sourceToolTip:hover .sourceToolTipText {
+  visibility: visible;
+}
