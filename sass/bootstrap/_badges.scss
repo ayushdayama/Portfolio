@@ -1,9 +1,5 @@
-//
 // Badges
-// --------------------------------------------------
 
-
-// Base class
 .badge {
   display: inline-block;
   min-width: 10px;
@@ -34,8 +30,6 @@
     top: 0;
     padding: 1px 5px;
   }
-
-  // [converter] extracted a& to a.badge
 
   // Account for badges in navs
   .list-group-item.active > &,

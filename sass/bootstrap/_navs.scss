@@ -1,14 +1,8 @@
-//
 // Navs
-// --------------------------------------------------
-
-
-// Base class
-// --------------------------------------------------
 
 .nav {
   margin-bottom: 0;
-  padding-left: 0; // Override default ul/ol
+  padding-left: 0;
   list-style: none;
   @include clearfix;
 
@@ -27,7 +21,6 @@
       }
     }
 
-    // Disabled state sets text to gray and nukes hover/tab effects
     &.disabled > a {
       color: $nav-disabled-link-color;
 
@@ -52,17 +45,11 @@
   }
 
   // Nav dividers (deprecated with v3.0.1)
-  //
-  // This should have been removed in v3 with the dropping of `.nav-list`, but
-  // we missed it. We don't currently support this anywhere, but in the interest
-  // of maintaining backward compatibility in case you use it, it's deprecated.
   .nav-divider {
     @include nav-divider;
   }
 
   // Prevent IE8 from misplacing imgs
-  //
-  // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
   > li > a > img {
     max-width: none;
   }
@@ -70,14 +57,10 @@
 
 
 // Tabs
-// -------------------------
-
-// Give the tabs something to sit on
 .nav-tabs {
   border-bottom: 1px solid $nav-tabs-border-color;
   > li {
     float: left;
-    // Make the list-items overlay the bottom border
     margin-bottom: -1px;
 
     // Actual tabs (as links)
@@ -113,12 +96,10 @@
 
 
 // Pills
-// -------------------------
 .nav-pills {
   > li {
     float: left;
 
-    // Links rendered as pills
     > a {
       border-radius: $nav-pills-border-radius;
     }
@@ -152,10 +133,6 @@
 
 
 // Nav variations
-// --------------------------------------------------
-
-// Justified nav links
-// -------------------------
 
 .nav-justified {
   width: 100%;
@@ -185,13 +162,10 @@
 }
 
 // Move borders to anchors instead of bottom of list
-//
-// Mixin for adding on top the shared `.nav-justified` styles for our tabs
 .nav-tabs-justified {
   border-bottom: 0;
 
   > li > a {
-    // Override margin from .nav-tabs
     margin-right: 0;
     border-radius: $border-radius-base;
   }
@@ -217,9 +191,7 @@
 
 
 // Tabbable tabs
-// -------------------------
 
-// Hide tabbable panes to start, show them when `.active`
 .tab-content {
   > .tab-pane {
     display: none;
@@ -231,12 +203,7 @@
 
 
 // Dropdowns
-// -------------------------
-
-// Specific dropdowns
 .nav-tabs .dropdown-menu {
-  // make dropdown border overlap tab border
   margin-top: -1px;
-  // Remove the top rounded corners here since there is a hard edge above the menu
   @include border-top-radius(0);
 }

@@ -1,22 +1,8 @@
-/*!
- * Bootstrap v3.3.5 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
-//
 // Load core variables and mixins
-// --------------------------------------------------
 
 @import "variables";
 @import "mixins";
 
-
-//
-// Buttons
-// --------------------------------------------------
-
-// Common styles
 .btn-default,
 .btn-primary,
 .btn-success,
@@ -27,7 +13,6 @@
   $shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
   @include box-shadow($shadow);
 
-  // Reset the shadow
   &:active,
   &.active {
     @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
@@ -44,10 +29,9 @@
   }
 }
 
-// Mixin for generating new styles
 @mixin btn-styles($btn-color: #555) {
   @include gradient-vertical($start-color: $btn-color, $end-color: darken($btn-color, 12%));
-  @include reset-filter; // Disable gradients for IE9 because filter bleeds through rounded corners; see https://github.com/twbs/bootstrap/issues/10620
+  @include reset-filter;
   background-repeat: repeat-x;
   border-color: darken($btn-color, 14%);
 
@@ -80,7 +64,6 @@
 
 // Common styles
 .btn {
-  // Remove the gradient for the pressed/active state
   &:active,
   &.active {
     background-image: none;
@@ -95,20 +78,10 @@
 .btn-warning { @include btn-styles($btn-warning-bg); }
 .btn-danger  { @include btn-styles($btn-danger-bg); }
 
-
-//
-// Images
-// --------------------------------------------------
-
 .thumbnail,
 .img-thumbnail {
   @include box-shadow(0 1px 2px rgba(0,0,0,.075));
 }
-
-
-//
-// Dropdowns
-// --------------------------------------------------
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
@@ -122,15 +95,9 @@
   background-color: darken($dropdown-link-active-bg, 5%);
 }
 
-
-//
-// Navbar
-// --------------------------------------------------
-
-// Default navbar
 .navbar-default {
   @include gradient-vertical($start-color: lighten($navbar-default-bg, 10%), $end-color: $navbar-default-bg);
-  @include reset-filter; // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
+  @include reset-filter;
   border-radius: $navbar-border-radius;
   $shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
   @include box-shadow($shadow);
@@ -149,7 +116,7 @@
 // Inverted navbar
 .navbar-inverse {
   @include gradient-vertical($start-color: lighten($navbar-inverse-bg, 10%), $end-color: $navbar-inverse-bg);
-  @include reset-filter; // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered; see https://github.com/twbs/bootstrap/issues/10257
+  @include reset-filter;
   border-radius: $navbar-border-radius;
   .navbar-nav > .open > a,
   .navbar-nav > .active > a {
@@ -182,12 +149,6 @@
   }
 }
 
-
-//
-// Alerts
-// --------------------------------------------------
-
-// Common styles
 .alert {
   text-shadow: 0 1px 0 rgba(255,255,255,.2);
   $shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.05);
@@ -206,12 +167,6 @@
 .alert-warning    { @include alert-styles($alert-warning-bg); }
 .alert-danger     { @include alert-styles($alert-danger-bg); }
 
-
-//
-// Progress bars
-// --------------------------------------------------
-
-// Give the progress background some depth
 .progress {
   @include gradient-vertical($start-color: darken($progress-bg, 4%), $end-color: $progress-bg)
 }
@@ -227,17 +182,9 @@
 .progress-bar-info       { @include progress-bar-styles($progress-bar-info-bg); }
 .progress-bar-warning    { @include progress-bar-styles($progress-bar-warning-bg); }
 .progress-bar-danger     { @include progress-bar-styles($progress-bar-danger-bg); }
-
-// Reset the striped class because our mixins don't do multiple gradients and
-// the above custom styles override the new `.progress-bar-striped` in v3.2.0.
 .progress-bar-striped {
   @include gradient-striped;
 }
-
-
-//
-// List groups
-// --------------------------------------------------
 
 .list-group {
   border-radius: $border-radius-base;
@@ -255,12 +202,6 @@
   }
 }
 
-
-//
-// Panels
-// --------------------------------------------------
-
-// Common styles
 .panel {
   @include box-shadow(0 1px 2px rgba(0,0,0,.05));
 }
@@ -277,11 +218,6 @@
 .panel-info > .panel-heading      { @include panel-heading-styles($panel-info-heading-bg); }
 .panel-warning > .panel-heading   { @include panel-heading-styles($panel-warning-heading-bg); }
 .panel-danger > .panel-heading    { @include panel-heading-styles($panel-danger-heading-bg); }
-
-
-//
-// Wells
-// --------------------------------------------------
 
 .well {
   @include gradient-vertical($start-color: darken($well-bg, 5%), $end-color: $well-bg);

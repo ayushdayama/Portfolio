@@ -1,7 +1,4 @@
-//
 // Popovers
-// --------------------------------------------------
-
 
 .popover {
   position: absolute;
@@ -11,8 +8,6 @@
   display: none;
   max-width: $popover-max-width;
   padding: 1px;
-  // Our parent element can be arbitrary since popovers are by default inserted as a sibling of their target element.
-  // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text;
   font-size: $font-size-base;
 
@@ -23,7 +18,6 @@
   border-radius: $border-radius-large;
   @include box-shadow(0 5px 10px rgba(0,0,0,.2));
 
-  // Offset the popover to account for the popover arrow
   &.top     { margin-top: -$popover-arrow-width; }
   &.right   { margin-left: $popover-arrow-width; }
   &.bottom  { margin-top: $popover-arrow-width; }
@@ -31,7 +25,7 @@
 }
 
 .popover-title {
-  margin: 0; // reset heading margin
+  margin: 0;
   padding: 8px 14px;
   font-size: $font-size-base;
   background-color: $popover-title-bg;
@@ -44,9 +38,6 @@
 }
 
 // Arrows
-//
-// .arrow is outer, .arrow:after is inner
-
 .popover > .arrow {
   &,
   &:after {

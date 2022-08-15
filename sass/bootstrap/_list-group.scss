@@ -1,11 +1,4 @@
-//
 // List groups
-// --------------------------------------------------
-
-
-// Base class
-//
-// Easily usable on <ul>, <ol>, or <div>.
 
 .list-group {
   // No need to set list-style: none; since .list-group-item is block level
@@ -15,14 +8,11 @@
 
 
 // Individual list items
-//
-// Use on `li`s or `div`s within the `.list-group` parent.
 
 .list-group-item {
   position: relative;
   display: block;
   padding: 10px 15px;
-  // Place the border on the list items and negative margin up for better styling
   margin-bottom: -1px;
   background-color: $list-group-bg;
   border: 1px solid $list-group-border;
@@ -39,9 +29,6 @@
 
 
 // Interactive list items
-//
-// Use anchor or button elements instead of `li`s or `div`s to create interactive items.
-// Includes an extra `.active` modifier class for showing selected items.
 
 a.list-group-item,
 button.list-group-item {
@@ -87,7 +74,7 @@ button.list-group-item {
   &.active,
   &.active:hover,
   &.active:focus {
-    z-index: 2; // Place active items above their siblings for proper border styling
+    z-index: 2;
     color: $list-group-active-color;
     background-color: $list-group-active-bg;
     border-color: $list-group-active-border;
@@ -106,9 +93,6 @@ button.list-group-item {
 
 
 // Contextual variants
-//
-// Add modifier classes to change text and background color on individual items.
-// Organizationally, this must come after the `:hover` states.
 
 @include list-group-item-variant(success, $state-success-bg, $state-success-text);
 @include list-group-item-variant(info, $state-info-bg, $state-info-text);
@@ -117,8 +101,6 @@ button.list-group-item {
 
 
 // Custom content options
-//
-// Extra classes for creating well-formatted content within `.list-group-item`s.
 
 .list-group-item-heading {
   margin-top: 0;

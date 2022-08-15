@@ -1,10 +1,4 @@
-//
 // Buttons
-// --------------------------------------------------
-
-
-// Base styles
-// --------------------------------------------------
 
 .btn {
   display: inline-block;
@@ -63,7 +57,6 @@ a.btn {
 
 
 // Alternate buttons
-// --------------------------------------------------
 
 .btn-default {
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
@@ -90,9 +83,6 @@ a.btn {
 
 
 // Link buttons
-// -------------------------
-
-// Make a button look and behave like a link
 .btn-link {
   color: $link-color;
   font-weight: normal;
@@ -130,8 +120,6 @@ a.btn {
 
 
 // Button Sizes
-// --------------------------------------------------
-
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
   @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
@@ -146,8 +134,6 @@ a.btn {
 
 
 // Block button
-// --------------------------------------------------
-
 .btn-block {
   display: block;
   width: 100%;

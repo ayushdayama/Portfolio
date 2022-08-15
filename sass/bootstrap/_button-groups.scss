@@ -1,8 +1,5 @@
-//
 // Button groups
-// --------------------------------------------------
 
-// Make the div behave like a button
 .btn-group,
 .btn-group-vertical {
   position: relative;
@@ -90,8 +87,6 @@
 
 
 // Sizing
-//
-// Remix the default button sizing classes into new ones for easier manipulation.
 
 .btn-group-xs > .btn { @extend .btn-xs; }
 .btn-group-sm > .btn { @extend .btn-sm; }
@@ -99,9 +94,6 @@
 
 
 // Split button dropdowns
-// ----------------------
-
-// Give the line between buttons some depth
 .btn-group > .btn + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
@@ -111,8 +103,6 @@
   padding-right: 12px;
 }
 
-// The clickable button for toggling the menu
-// Remove the gradient and set the same inset shadow as the :active state
 .btn-group.open .dropdown-toggle {
   @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
 
@@ -139,8 +129,6 @@
 
 
 // Vertical button groups
-// ----------------------
-
 .btn-group-vertical {
   > .btn,
   > .btn-group,
@@ -194,10 +182,6 @@
   @include border-top-radius(0);
 }
 
-
-// Justified button groups
-// ----------------------
-
 .btn-group-justified {
   display: table;
   width: 100%;
@@ -217,19 +201,6 @@
     left: auto;
   }
 }
-
-
-// Checkbox and radio options
-//
-// In order to support the browser's form validation feedback, powered by the
-// `required` attribute, we have to "hide" the inputs via `clip`. We cannot use
-// `display: none;` or `visibility: hidden;` as that also hides the popover.
-// Simply visually hiding the inputs via `opacity` would leave them clickable in
-// certain cases which is prevented by using `clip` and `pointer-events`.
-// This way, we ensure a DOM element is visible to position the popover from.
-//
-// See https://github.com/twbs/bootstrap/pull/12794 and
-// https://github.com/twbs/bootstrap/pull/14559 for more information.
 
 [data-toggle="buttons"] {
   > .btn,
