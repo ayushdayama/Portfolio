@@ -157,5 +157,5 @@ function showMeAlert(sectionName) {
 	else if(sectionName == "fmw")	  	 { sectionURL = "#fh5co-blog";     }
 	else if(sectionName == "hireMe")  	 { sectionURL = "#fh5co-started";  }
 	else if(sectionName == "contact") 	 { sectionURL = "#fh5co-consult";  }
-	window.prompt("Like this section? \nHere the URL to reach me easily next time 😃", "https://ayushdayama.github.io/Portfolio" + sectionURL);
+	window.prompt("Like this section? \nHere's the URL to reach me easily next time 😃", "https://ayushdayama.github.io/Portfolio" + sectionURL);
 }
